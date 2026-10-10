@@ -2,9 +2,7 @@
   font-family: "PP Woodland";
   src:
     local("PP Woodland"),
-    local("PPWoodland-Regular"),
-    url("fonts/PPWoodland-Regular.woff2") format("woff2"),
-    url("fonts/PPWoodland-Regular.woff") format("woff");
+    local("PPWoodland-Regular");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -14,8 +12,7 @@
   font-family: "PP Woodland";
   src:
     local("PP Woodland Medium"),
-    local("PPWoodland-Medium"),
-    url("fonts/PPWoodland-Medium.woff2") format("woff2");
+    local("PPWoodland-Medium");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -25,9 +22,7 @@
   font-family: "PP Woodland";
   src:
     local("PP Woodland Bold"),
-    local("PPWoodland-Bold"),
-    url("fonts/PPWoodland-Bold.woff2") format("woff2"),
-    url("fonts/PPWoodland-Bold.woff") format("woff");
+    local("PPWoodland-Bold");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -52,9 +47,13 @@
     #ee90b4 100%
   );
   --radius: 28px;
-  --font: "Be Vietnam Pro", system-ui, sans-serif;
-  --display: "PP Woodland", Fraunces, "Times New Roman", serif;
-  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font: var(--font-be-vietnam), system-ui, sans-serif;
+  --display: "PP Woodland", var(--font-fraunces), "Times New Roman", serif;
+  --mono: var(--font-plex-mono), ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+.page-shell {
+  display: contents;
 }
 
 *,
@@ -139,7 +138,7 @@ body:has(.hero-stage) main {
   padding-top: 0;
 }
 
-body[data-page="join"] main {
+body [data-page="join"] main {
   margin-top: 0;
   width: min(720px, calc(100% - 32px));
 }
@@ -466,27 +465,27 @@ body[data-page="join"] main {
   animation: kenburns 32s ease-in-out infinite alternate;
 }
 
-body[data-page="home"] .hero-bg {
+body [data-page="home"] .hero-bg {
   object-position: 50% 42%;
 }
 
-body[data-page="founder"] .hero-bg {
+body [data-page="founder"] .hero-bg {
   object-position: 32% 48%;
 }
 
-body[data-page="about"] .hero-bg {
+body [data-page="about"] .hero-bg {
   object-position: 50% 40%;
 }
 
-body[data-page="learn"] .hero-bg {
+body [data-page="learn"] .hero-bg {
   object-position: 50% 46%;
 }
 
-body[data-page="contests"] .hero-bg {
+body [data-page="contests"] .hero-bg {
   object-position: 48% 42%;
 }
 
-body[data-page="join"] .hero-bg {
+body [data-page="join"] .hero-bg {
   object-position: 50% 50%;
 }
 
@@ -526,12 +525,12 @@ body[data-page="join"] .hero-bg {
   transition: transform 0.35s ease-out;
 }
 
-body[data-page="home"] .hero-stage {
+body [data-page="home"] .hero-stage {
   align-items: center;
   padding: 108px 0 64px;
 }
 
-body[data-page="home"] .hero-veil {
+body [data-page="home"] .hero-veil {
   background:
     linear-gradient(
       90deg,
@@ -559,31 +558,31 @@ body[data-page="home"] .hero-veil {
     );
 }
 
-body[data-page="home"] .hero-copy {
+body [data-page="home"] .hero-copy {
   width: min(1180px, calc(100% - 48px));
   justify-content: center;
 }
 
-body[data-page="home"] .eyebrow,
-body[data-page="home"] .lead,
-body[data-page="home"] .hero-actions {
+body [data-page="home"] .eyebrow,
+body [data-page="home"] .lead,
+body [data-page="home"] .hero-actions {
   max-width: min(100%, 42rem);
 }
 
-body[data-page="home"] .lead-line {
+body [data-page="home"] .lead-line {
   display: block;
   white-space: nowrap;
 }
 
-body[data-page="home"] .eyebrow {
+body [data-page="home"] .eyebrow {
   white-space: nowrap;
 }
 
-body[data-page="home"] .hero-actions {
+body [data-page="home"] .hero-actions {
   flex-wrap: nowrap;
 }
 
-body[data-page="home"] .hero-actions .btn {
+body [data-page="home"] .hero-actions .btn {
   white-space: nowrap;
 }
 
@@ -657,7 +656,7 @@ body[data-page="home"] .hero-actions .btn {
   font-size: 0.95rem;
 }
 
-body[data-page="join"] .hero-stage {
+body [data-page="join"] .hero-stage {
   align-items: center;
   justify-content: center;
   padding: 96px 16px 48px;
@@ -2041,23 +2040,23 @@ body[data-page="join"] .hero-stage {
     padding-bottom: 8vh;
   }
 
-  body[data-page="home"] .hero-stage {
+  body [data-page="home"] .hero-stage {
     align-items: flex-end;
     padding: 96px 0 8vh;
   }
 
-  body[data-page="home"] .eyebrow,
-  body[data-page="home"] .hero-title,
-  body[data-page="home"] .lead,
-  body[data-page="home"] .hero-actions {
+  body [data-page="home"] .eyebrow,
+  body [data-page="home"] .hero-title,
+  body [data-page="home"] .lead,
+  body [data-page="home"] .hero-actions {
     max-width: 100%;
   }
 
-  body[data-page="home"] .hero-actions {
+  body [data-page="home"] .hero-actions {
     flex-wrap: wrap;
   }
 
-  body[data-page="home"] .lead-line {
+  body [data-page="home"] .lead-line {
     white-space: normal;
     display: inline;
   }
@@ -2166,12 +2165,12 @@ body[data-page="join"] .hero-stage {
     width: min(1180px, calc(100% - 36px));
   }
 
-  body[data-page="home"] .eyebrow {
+  body [data-page="home"] .eyebrow {
     letter-spacing: 0.1em;
     font-size: 0.64rem;
   }
 
-  body[data-page="home"] .lead-line {
+  body [data-page="home"] .lead-line {
     white-space: normal;
     display: inline;
   }
