@@ -674,7 +674,7 @@ body[data-page="home"] .hero-actions .btn {
 .page-hero-title {
   font-size: clamp(2.6rem, 7vw, 4.8rem);
   line-height: 1.18;
-  max-width: 18ch;
+  max-width: min(18ch, 100%);
   margin: 8px 0 16px;
   filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.45));
 }
@@ -1674,6 +1674,9 @@ body[data-page="join"] .hero-stage {
 }
 
 .stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 22px 18px;
   border-radius: 22px;
   border: 1px solid var(--stroke);
@@ -2190,13 +2193,10 @@ body[data-page="join"] .hero-stage {
   .steps,
   .principle-grid,
   .join-reasons,
-  .member-grid--pair {
-    grid-template-columns: 1fr;
-  }
-
+  .member-grid--pair,
   .member-grid--solo,
   .member-grid--home {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .hero-stage {
@@ -2235,6 +2235,7 @@ body[data-page="join"] .hero-stage {
 
   .photo-slider {
     height: 360px;
+    overflow: hidden;
   }
 
   .slide {
@@ -2272,7 +2273,7 @@ body[data-page="join"] .hero-stage {
 
   .goal-grid,
   .contest-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .tech-grid {
@@ -2336,12 +2337,86 @@ body[data-page="join"] .hero-stage {
 @media (max-width: 640px) {
   .goal-grid,
   .contest-grid,
-  .join-form {
-    grid-template-columns: 1fr;
+  .join-form,
+  .tech-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .tech-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .tech-card {
+    flex-direction: row;
+    gap: 14px;
+    padding: 10px 14px;
+  }
+
+  .tech-card span {
+    font-size: 0.92rem;
+    text-align: left;
+  }
+
+  .tech-logo {
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+  }
+
+  .tech-logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .tech-logo.duo img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .site-header {
+    top: 10px;
+    width: calc(100% - 20px);
+    padding: 8px 8px 8px 16px;
+  }
+
+  .hero-actions,
+  body[data-page="home"] .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  body[data-page="home"] .eyebrow {
+    white-space: normal;
+  }
+
+  .founder-contact {
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+
+  .founder-contact a {
+    overflow-wrap: anywhere;
+  }
+
+  .photo-slider {
+    height: 300px;
+  }
+
+  .slide {
+    width: 86%;
+  }
+
+  .page-banner-copy {
+    padding: 24px 20px;
+  }
+
+  .liquid-card {
+    padding: 36px 22px 30px;
   }
 
   .panel,
