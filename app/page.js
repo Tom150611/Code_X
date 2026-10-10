@@ -1,6 +1,6 @@
 import Link from "next/link";
-import CtaBanner from "@/components/CtaBanner";
 import HeroStage from "@/components/HeroStage";
+import MembersHome from "@/components/MembersHome";
 import PageShell from "@/components/PageShell";
 import PhotoMarquee from "@/components/PhotoMarquee";
 import PhotoSlider from "@/components/PhotoSlider";
@@ -121,9 +121,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <CtaBanner kicker="Mở đơn" title="Tuyển thành viên" action="Gửi đăng ký">
-          CodeX đang mở đơn cho học sinh khối 10, 11. Mời các bạn đăng ký để cùng học tập và phát triển sản phẩm.
-        </CtaBanner>
+        <MembersHome />
       </main>
     </PageShell>
   );

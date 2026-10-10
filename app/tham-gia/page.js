@@ -7,21 +7,6 @@ export const metadata = {
   description: "Đăng ký tham gia CLB CodeX. Dành cho học sinh khối 10.",
 };
 
-const reasons = [
-  {
-    title: "Thành viên",
-    text: "Câu lạc bộ dành cho học sinh khối 10, 11 yêu thích lập trình và công nghệ.",
-  },
-  {
-    title: "Học tập có mentor",
-    text: "Mentor hướng dẫn từ nền tảng đến sản phẩm, đồng hành khi thành viên gặp khó khăn.",
-  },
-  {
-    title: "Đăng ký qua form",
-    text: "Quét mã QR, điền form đăng ký. Founder sẽ phản hồi qua SĐT +84 396 459 688.",
-  },
-];
-
 export default function JoinPage() {
   return (
     <PageShell page="join">
@@ -56,16 +41,6 @@ export default function JoinPage() {
           </p>
         </section>
       </HeroStage>
-
-      <section className="join-reasons">
-        {reasons.map((reason, i) => (
-          <article key={reason.title} className="join-reason panel reveal">
-            <p className="kicker">{String(i + 1).padStart(2, "0")}</p>
-            <h3>{reason.title}</h3>
-            <p>{reason.text}</p>
-          </article>
-        ))}
-      </section>
     </PageShell>
   );
 }

@@ -8,6 +8,7 @@ const links = [
   { href: "/", label: "Trang chủ" },
   { href: "/ve-clb", label: "Về CLB" },
   { href: "/founder", label: "Founder" },
+  { href: "/thanh-vien", label: "Thành viên" },
   { href: "/hoc-tap", label: "Học tập" },
   { href: "/cuoc-thi", label: "Cuộc thi" },
   { href: "/tham-gia", label: "Tham gia", cta: true },
