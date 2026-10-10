@@ -73,19 +73,19 @@ export default function ContestsPage() {
 
         <section className="stat-row reveal">
           <article className="stat">
-            <strong className="shine-text">Hồ sơ</strong>
+            <strong className="shine-text">Hồ sơ</strong>{" "}
             <span>Chuẩn bị bài dự thi đầy đủ</span>
           </article>
           <article className="stat">
-            <strong className="shine-text">Đội hình</strong>
+            <strong className="shine-text">Đội hình</strong>{" "}
             <span>Làm việc nhóm có định hướng</span>
           </article>
           <article className="stat">
-            <strong className="shine-text">Sản phẩm</strong>
+            <strong className="shine-text">Sản phẩm</strong>{" "}
             <span>Một sản phẩm chạy được để trình bày</span>
           </article>
           <article className="stat">
-            <strong className="shine-text">Trình bày</strong>
+            <strong className="shine-text">Trình bày</strong>{" "}
             <span>Rèn luyện kỹ năng thuyết trình</span>
           </article>
         </section>

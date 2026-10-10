@@ -67,19 +67,19 @@ export default function HomePage() {
 
         <section className="stat-row reveal">
           <article className="stat">
-            <strong className="shine-text">CLB</strong>
+            <strong className="shine-text">CLB</strong>{" "}
             <span>Tiếp nhận học sinh khối 10, 11.</span>
           </article>
           <article className="stat">
-            <strong className="shine-text">Sản phẩm</strong>
+            <strong className="shine-text">Sản phẩm</strong>{" "}
             <span>Mỗi thành viên hướng tới một sản phẩm hoàn chỉnh.</span>
           </article>
           <article className="stat">
-            <strong className="shine-text">Web · Python</strong>
+            <strong className="shine-text">Web · Python</strong>{" "}
             <span>Định hướng học tập</span>
           </article>
           <article className="stat">
-            <strong className="shine-text">Cuộc thi</strong>
+            <strong className="shine-text">Cuộc thi</strong>{" "}
             <span>Sân chơi công nghệ học đường</span>
           </article>
         </section>
