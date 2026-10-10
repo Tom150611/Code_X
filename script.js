@@ -1,10 +1,40 @@
+const header = document.querySelector(".site-header");
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");
 
-if (toggle && nav) {
-  toggle.addEventListener("click", () => {
-    const open = nav.classList.toggle("open");
+if (header && toggle && nav) {
+  const desktop = window.matchMedia("(min-width: 981px)");
+
+  function setMenu(open) {
+    nav.classList.toggle("open", open);
+    header.classList.toggle("nav-open", open);
     toggle.setAttribute("aria-expanded", String(open));
+    toggle.setAttribute("aria-label", open ? "Đóng menu" : "Mở menu");
+  }
+
+  toggle.addEventListener("click", () => {
+    setMenu(!nav.classList.contains("open"));
+  });
+
+  nav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setMenu(false);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (nav.classList.contains("open") && !header.contains(event.target)) {
+      setMenu(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav.classList.contains("open")) {
+      setMenu(false);
+      toggle.focus();
+    }
+  });
+
+  desktop.addEventListener("change", (event) => {
+    if (event.matches) setMenu(false);
   });
 }
 

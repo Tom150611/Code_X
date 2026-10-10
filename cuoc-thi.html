@@ -25,8 +25,11 @@
 
   <header class="site-header">
     <a class="brand shine-text" href="index.html">CodeX</a>
-    <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false">Menu</button>
-    <nav class="nav">
+    <button class="nav-toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="site-nav">
+      <span class="nav-toggle-icon" aria-hidden="true"></span>
+      <span class="nav-toggle-text">Menu</span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Điều hướng chính">
       <a href="index.html">Trang chủ</a>
       <a href="ve-clb.html">Về CLB</a>
       <a href="founder.html">Founder</a>
