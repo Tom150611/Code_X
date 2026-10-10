@@ -486,7 +486,8 @@ body[data-page="contests"] .hero-bg {
   object-position: 48% 42%;
 }
 
-body[data-page="join"] .hero-bg {
+body[data-page="join"] .hero-bg,
+body[data-page="auth"] .hero-bg {
   object-position: 50% 50%;
 }
 
@@ -657,7 +658,8 @@ body[data-page="home"] .hero-actions .btn {
   font-size: 0.95rem;
 }
 
-body[data-page="join"] .hero-stage {
+body[data-page="join"] .hero-stage,
+body[data-page="auth"] .hero-stage {
   align-items: center;
   justify-content: center;
   padding: 96px 16px 48px;
@@ -1563,6 +1565,162 @@ body[data-page="join"] .hero-stage {
   margin: 0;
 }
 
+.auth-card {
+  animation: none;
+  border-radius: 32px;
+  text-align: left;
+  width: min(460px, 100%);
+}
+
+.auth-card h1,
+.auth-card .kicker,
+.auth-card .lead {
+  text-align: center;
+}
+
+.auth-card .lead {
+  margin-bottom: 22px;
+}
+
+.auth-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: left;
+}
+
+.auth-form .full,
+.auth-form .btn,
+.auth-message {
+  grid-column: 1 / -1;
+}
+
+.auth-form input,
+.auth-form select {
+  width: 100%;
+  background: rgba(255, 232, 214, 0.08);
+  border: 1px solid rgba(255, 214, 186, 0.22);
+  border-radius: 999px;
+  padding: 12px 16px;
+  color: #fff;
+  font: inherit;
+  appearance: none;
+}
+
+.auth-form select {
+  background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%),
+    linear-gradient(135deg, var(--gold) 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) calc(50% - 3px),
+    calc(100% - 12px) calc(50% - 3px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+  padding-right: 36px;
+}
+
+.auth-form select option {
+  color: #2a1612;
+  background: #faf6f2;
+}
+
+.auth-form input::placeholder {
+  color: rgba(201, 182, 174, 0.7);
+}
+
+.auth-form input:focus,
+.auth-form select:focus {
+  outline: none;
+  border-color: #f3c77a;
+  box-shadow: 0 0 0 3px rgba(243, 199, 122, 0.18);
+}
+
+.auth-form .btn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.auth-message {
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.auth-message[data-type="error"] {
+  color: #ffd0d8;
+  background: rgba(240, 100, 120, 0.16);
+  border: 1px solid rgba(240, 120, 140, 0.35);
+}
+
+.auth-message[data-type="ok"] {
+  color: #ffe8b8;
+  background: rgba(243, 199, 122, 0.14);
+  border: 1px solid rgba(243, 199, 122, 0.35);
+}
+
+.auth-switch {
+  margin: 18px 0 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.auth-switch a {
+  color: var(--gold);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(243, 199, 122, 0.45);
+}
+
+.auth-switch a:hover {
+  border-bottom-color: var(--gold);
+}
+
+.auth-card .qr-hint {
+  margin-top: 14px;
+  text-align: center;
+}
+
+.auth-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 4px 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 228, 204, 0.1);
+  border: 1px solid rgba(255, 214, 186, 0.16);
+}
+
+.auth-user {
+  font-size: 0.84rem;
+  font-weight: 500;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--peach);
+}
+
+.auth-logout {
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #2a1612;
+  background: linear-gradient(120deg, #f3c77a, #f0a3b4 58%, #ffb89a);
+}
+
 @keyframes liquid-morph {
   0%,
   100% {
@@ -2240,8 +2398,18 @@ body[data-page="join"] .hero-stage {
 @media (max-width: 640px) {
   .goal-grid,
   .contest-grid,
-  .join-form {
+  .join-form,
+  .auth-form {
     grid-template-columns: 1fr;
+  }
+
+  .auth-card {
+    padding: 32px 22px 28px;
+  }
+
+  .auth-nav {
+    width: 100%;
+    justify-content: space-between;
   }
 
   .tech-grid {
