@@ -1951,6 +1951,16 @@ body[data-page="join"] .hero-stage {
   justify-content: center;
 }
 
+.member-grid--home {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 8px;
+}
+
+.member-home-more {
+  margin: 24px 0 0;
+  text-align: center;
+}
+
 .member-card {
   text-align: center;
   padding: 28px 22px 26px;
@@ -2119,7 +2129,8 @@ body[data-page="join"] .hero-stage {
     grid-template-columns: 1fr;
   }
 
-  .member-grid--solo {
+  .member-grid--solo,
+  .member-grid--home {
     grid-template-columns: 1fr;
   }
 
