@@ -1919,24 +1919,6 @@ body[data-page="join"] .hero-stage {
   margin-bottom: 28px;
 }
 
-.member-class-block {
-  margin-top: 28px;
-}
-
-.member-class-block + .member-class-block {
-  margin-top: 36px;
-  padding-top: 32px;
-  border-top: 1px solid rgba(255, 214, 186, 0.12);
-}
-
-.member-class-label {
-  font-family: var(--display);
-  font-size: 1.15rem;
-  letter-spacing: -0.02em;
-  margin: 0 0 14px;
-  color: var(--accent);
-}
-
 .member-roster {
   margin-top: 0;
 }
